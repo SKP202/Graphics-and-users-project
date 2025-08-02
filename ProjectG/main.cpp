@@ -1,13 +1,13 @@
 #include <GL/glut.h>
-#include <cmath> // For C++ math functions
+#include <cmath> 
 #include <GL/glu.h>
-#include <stdio.h>  // For file I/O, printf
-#include <stdlib.h> // For malloc, exit, rand, srand
-#include <string.h> // For strcpy, strcmp
-#include <time.h>   // For time (seeding rand)
+#include <stdio.h>  
+#include <stdlib.h> 
+#include <string.h>
+#include <time.h>  
 
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h" // For loading images as textures
+#include "stb_image.h" 
 
 // Defines for Mountain generation
 #define NUM_SPLINE_CONTROL_POINTS 6 // Kept if spline logic is re-enabled later
@@ -26,12 +26,12 @@
 // Structure for a node in the scene graph (used for robot parts)
 typedef struct SceneNode {
     char name[50];
-    int isJoint; // 0 for body part (cube), 1 for joint (sphere), 2 for head (sphere)
-    float angleX, angleY, angleZ; // Rotation relative to parent
-    float posX, posY, posZ;       // Position relative to parent
-    float sizeX, sizeY, sizeZ;    // Dimensions of the part
-    float colorR, colorG, colorB; // Base color if not textured
-    float ambient[4];             // Material properties
+    int isJoint; 
+    float angleX, angleY, angleZ; 
+    float posX, posY, posZ;       
+    float sizeX, sizeY, sizeZ;   
+    float colorR, colorG, colorB;
+    float ambient[4];             
     float diffuse[4];
     float specular[4];
     float shininess;
